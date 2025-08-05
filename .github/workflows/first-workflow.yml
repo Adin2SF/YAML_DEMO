@@ -1,0 +1,17 @@
+name: First YAML Action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print Hello
+        run: echo "Hello, Adarsh! You just ran your first YAML workflow"
